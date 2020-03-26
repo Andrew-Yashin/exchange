@@ -100,7 +100,7 @@ class MainPresenter : BasePresenter<MainView>() {
                     .subscribe({
                         viewState.showChangedMoney(countOfCurrency * it)
                     }, {
-
+                        viewState.showToast("Произошла ошибка при взаимодействии с базой данных!\nПерезайдите в приложение..")
                     })
                     .addTo(compositeDisposable)
             }
