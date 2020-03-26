@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".main.view.MainActivity">
+
+        <ProgressBar
+            android:id="@+id/progress_bar_main"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/layout_currency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/currency_button_background">
+
+            <LinearLayout
+                android:id="@+id/layout_buttons_from_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_from_rub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:text="@string/rub" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_from_usd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:text="@string/usd" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_from_eur"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:text="@string/eur" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_from_gbp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:text="@string/gbp" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_from_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_keyboard_arrow_down" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_input_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_buttons_from_currency"
+                android:layout_alignStart="@+id/layout_buttons_from_currency"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@android:color/transparent"
+                android:digits="0123456789."
+                android:hint="@string/from_money"
+                android:inputType="number"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_text_input_money"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <View
+                    android:id="@+id/border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:background="@color/currency_button_border_color" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/make_change_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_change" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edit_text_output_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_border"
+                android:layout_alignStart="@+id/layout_buttons_from_currency"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/to_money"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_buttons_to_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_text_output_money"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_to_rub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:text="@string/rub" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_to_usd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:text="@string/usd" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_to_eur"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:text="@string/eur" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_to_gbp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:text="@string/gbp" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_to_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/currency_button_background"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_keyboard_arrow_down" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</ScrollView>

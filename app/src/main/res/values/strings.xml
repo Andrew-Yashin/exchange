@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Exchange</string>
+    <string name="from_money">У меня есть</string>
+    <string name="to_money">У меня будет</string>
+    <string name="rub">RUB</string>
+    <string name="usd">USD</string>
+    <string name="eur">EUR</string>
+    <string name="gbp">GBP</string>
+    <string-array name="currencies">
+        <item> "CAD"</item>
+        <item> "HKD"</item>
+        <item> "ISK"</item>
+        <item> "PHP"</item>
+        <item> "DKK"</item>
+        <item> "HUF"</item>
+        <item> "CZK"</item>
+        <item> "GBP"</item>
+        <item> "RON"</item>
+        <item> "SEK"</item>
+        <item> "IDR"</item>
+        <item> "INR"</item>
+        <item> "BRL"</item>
+        <item> "HRK"</item>
+        <item> "JPY"</item>
+        <item> "THB"</item>
+        <item> "CHF"</item>
+        <item> "MYR"</item>
+        <item> "BGN"</item>
+        <item> "TRY"</item>
+        <item> "CNY"</item>
+        <item> "NOK"</item>
+        <item> "NZD"</item>
+        <item> "ZAR"</item>
+        <item> "MXN"</item>
+        <item> "SGD"</item>
+        <item> "AUD"</item>
+        <item> "ILS"</item>
+        <item> "KRW"</item>
+        <item> "PLN"</item>
+    </string-array>
+
+    <string-array name="counties">
+        <item> "Канадский доллар"</item>
+        <item> "Гонконгский доллар"</item>
+        <item> "Исландская крона"</item>
+        <item> "Филиппинское песо"</item>
+        <item> "Датская крона"</item>
+        <item> "Венгерский форинт"</item>
+        <item> "Чешская крона"</item>
+        <item> "Фунт стерлингов"</item>
+        <item> "Румынский лей"</item>
+        <item> "Шведская крона"</item>
+        <item> "Индонезийская рупия"</item>
+        <item> "Индийская рупия"</item>
+        <item> "Бразильский реал"</item>
+        <item> "Хорватская куна"</item>
+        <item> "Японская иена"</item>
+        <item> "Тайский бат"</item>
+        <item> "Швейцарский франк"</item>
+        <item> "Малайзийский ринггит"</item>
+        <item> "Болгарский лев"</item>
+        <item> "Турецкая лира"</item>
+        <item> "Китайский юань"</item>
+        <item> "Норвежская крона"</item>
+        <item> "Новозеландский доллар"</item>
+        <item> "Южноафриканский рэнд"</item>
+        <item> "Мексиканское песо"</item>
+        <item> "Сингапурский доллар"</item>
+        <item> "Австралийский доллар"</item>
+        <item> "Израильский Новый Шекель"</item>
+        <item> "Южнокорейская вона"</item>
+        <item> "Польский злотый"</item>
+    </string-array>
+</resources>
