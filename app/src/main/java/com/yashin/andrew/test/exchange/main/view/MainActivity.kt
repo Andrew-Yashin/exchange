@@ -41,53 +41,21 @@ class MainActivity : BaseActivity(), MainView {
         toButtonsArray.add(button_to_eur)
         toButtonsArray.add(button_to_gbp)
 
-        button_from_rub.clicks()
-            .throttleFirst(500, TimeUnit.MILLISECONDS)
-            .subscribe {
-                presenter.resolveCurrencyButtonClick(button_from_rub.text.toString(), false)
-            }
+        for(button in fromButtonsArray){
+            button.clicks()
+                .throttleFirst(500, TimeUnit.MILLISECONDS)
+                .subscribe {
+                    presenter.resolveCurrencyButtonClick(button.text.toString(), false)
+                }
+        }
 
-        button_from_usd.clicks()
-            .throttleFirst(500, TimeUnit.MILLISECONDS)
-            .subscribe {
-                presenter.resolveCurrencyButtonClick(button_from_usd.text.toString(), false)
-            }
-
-        button_from_eur.clicks()
-            .throttleFirst(500, TimeUnit.MILLISECONDS)
-            .subscribe {
-                presenter.resolveCurrencyButtonClick(button_from_eur.text.toString(), false)
-            }
-
-        button_from_gbp.clicks()
-            .throttleFirst(500, TimeUnit.MILLISECONDS)
-            .subscribe {
-                presenter.resolveCurrencyButtonClick(button_from_gbp.text.toString(), false)
-            }
-
-        button_to_rub.clicks()
-            .throttleFirst(500, TimeUnit.MILLISECONDS)
-            .subscribe {
-                presenter.resolveCurrencyButtonClick(button_to_rub.text.toString(), true)
-            }
-
-        button_to_usd.clicks()
-            .throttleFirst(500, TimeUnit.MILLISECONDS)
-            .subscribe {
-                presenter.resolveCurrencyButtonClick(button_to_usd.text.toString(), true)
-            }
-
-        button_to_eur.clicks()
-            .throttleFirst(500, TimeUnit.MILLISECONDS)
-            .subscribe {
-                presenter.resolveCurrencyButtonClick(button_to_eur.text.toString(), true)
-            }
-
-        button_to_gbp.clicks()
-            .throttleFirst(500, TimeUnit.MILLISECONDS)
-            .subscribe {
-                presenter.resolveCurrencyButtonClick(button_to_gbp.text.toString(), true)
-            }
+        for(button in toButtonsArray){
+            button.clicks()
+                .throttleFirst(500, TimeUnit.MILLISECONDS)
+                .subscribe {
+                    presenter.resolveCurrencyButtonClick(button.text.toString(), true)
+                }
+        }
 
         button_from_other.clicks()
             .throttleFirst(500, TimeUnit.MILLISECONDS)
@@ -106,10 +74,10 @@ class MainActivity : BaseActivity(), MainView {
             .subscribe {
                 try {
                     if (edit_text_input_money.text.isNullOrEmpty())
-                        showToast("Введите количество меняемых денег!")
+                        showToast("Введите сумму для конвертации!")
                     else presenter.getRate(edit_text_input_money.text.toString().toFloat())
                 } catch (exception: NumberFormatException) {
-                    showToast("Введено неверное значение меняемых денег!")
+                    showToast("Введена неверная сумма денег для конвертации!")
                 }
             }
     }
@@ -180,7 +148,7 @@ class MainActivity : BaseActivity(), MainView {
     override fun showEmptyDBSnackBar() {
         Snackbar.make(
                 window.decorView.rootView,
-                "Нет загруженных курсов",
+                "Нет загруженных курсов валют",
                 Snackbar.LENGTH_INDEFINITE
             )
             .setAction("Загрузить") {
